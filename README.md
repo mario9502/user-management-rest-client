@@ -6,10 +6,6 @@ User Managment Client is a simple API which was created to test the functionalit
 
 It was build with Spring Boot with Maven on Java 17. The app is runnunig on port 8081.
 
-### Dependencies
-
-* ModelMapper was used for converting POJO to DTO and vice versa
-
 ### Executing program
 
 First run the User Managment REST API so the functionality of the requests can work properly.
