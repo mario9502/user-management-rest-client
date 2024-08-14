@@ -10,6 +10,6 @@ It was build with Spring Boot with Maven on Java 17. The app is runnunig on port
 
 First run the User Managment REST API so the functionality of the requests can work properly.
 
-Run the "UserManagementAppApplication".
+Run the "UserManagementAppClientApplication".
 
 On http://localhost:8081/ you will find the home web page.
