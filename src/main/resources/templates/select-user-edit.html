@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Select User To Edit</title>
+</head>
+
+<body>
+
+<form th:method="POST" th:action="@{/users/edit/email}">
+    <h1>Select user to edit</h1>
+    <div>
+        <div th:object="${allUsers}">
+            <label th:for="userEmail"> User email
+                <select th:value="email" id="userEmail" name="email">
+                    <option
+                            th:each="user: ${allUsers}"
+                            th:value="${user.email}"
+                            th:text="${user.email}">
+                    </option>
+                </select>
+            </label>
+        </div>
+
+    </div>
+
+    <div>
+        <button type="submit">Select</button>
+    </div>
+
+</form>
+
+</body>
+</html>

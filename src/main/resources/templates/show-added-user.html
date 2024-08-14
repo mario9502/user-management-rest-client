@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show User</title>
+</head>
+<body>
+
+<div th:object="${userInfo}">
+
+    <span th:text="*{id}">First name</span>
+    <br>
+    <span th:text="*{firstName}">First name</span>
+    <br>
+    <span th:text="*{lastName}">Last name</span>
+    <br>
+    <span th:text="*{dateOfBirth}">Date of birth</span>
+    <br>
+    <span th:text="*{phoneNumber}">Phone number</span>
+    <br>
+    <span th:text="*{email}">Email</span>
+
+</div>
+
+</body>
+</html>

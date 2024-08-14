@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+
+<div>
+    <ul>
+        <li>
+            <div>
+                <button
+                        th:data-url="@{http://localhost:8081/users/add}"
+                        onclick="window.open(this.getAttribute('data-url'))">Add user</button>
+            </div>
+        </li>
+        <li>
+            <div>
+                <button
+                        th:data-url="@{http://localhost:8081/users/all}"
+                        onclick="window.open(this.getAttribute('data-url'))">See all users</button>
+            </div>
+        </li>
+        <li>
+            <div>
+                <button
+                        th:data-url="@{http://localhost:8081/users/allSorted}"
+                        onclick="window.open(this.getAttribute('data-url'))">See all users sorted</button>
+            </div>
+        </li>
+        <li>
+            <form th:method="POST" th:action="@{/users/id}">
+                <div>
+                    <div>
+                        <label th:for="findById">Find user by ID</label>
+                    </div>
+                    <input  type="text" th:value="${id}" id="findById" name="id" placeholder="Some UUID here..."/>
+                </div>
+                <div>
+                    <button type="submit">Find</button>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form th:method="POST" th:action="@{/users/email}">
+                <div>
+                    <div>
+                        <label th:for="findByEmail">Find user by email</label>
+                    </div>
+                    <input type="text" th:value="${email}" id="findByEmail" name="email" placeholder="example@mail.com"/>
+                </div>
+                <div>
+                    <button type="submit">Find</button>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form th:method="POST" th:action="@{/users/year}">
+                <div>
+                    <div>
+                        <label th:for="yearOfBirthBefore">Find users with year of birth before</label>
+                    </div>
+                    <input type="text" th:value="${year}" id="yearOfBirthBefore" name="year" placeholder="Born before .... year"/>
+                </div>
+                <div>
+                    <button type="submit">Find</button>
+                </div>
+            </form>
+        </li>
+        <li>
+            <div>
+                <button
+                        th:data-url="@{http://localhost:8081/users/edit/select}"
+                        onclick="window.open(this.getAttribute('data-url'))">Edit user by email</button>
+            </div>
+        </li>
+        <li>
+            <div>
+                <button
+                        th:data-url="@{http://localhost:8081/users/delete/select}"
+                        onclick="window.open(this.getAttribute('data-url'))">Delete user by email</button>
+            </div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

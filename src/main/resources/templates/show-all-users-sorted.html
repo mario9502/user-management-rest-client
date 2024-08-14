@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Show User</title>
+</head>
+<body>
+
+<div th:object="${allUsers}">
+
+    <div th:each="user: ${allUsers}">
+        <div>
+            <span>First name:
+                <span th:text="${user.firstName}"></span>
+            </span>
+            <br>
+            <span>Last name
+                <span th:text="${user.lastName}"></span>
+            </span>
+            <br>
+            <span>Date of birth:
+                <span th:text="${user.dateOfBirth}"></span>
+            </span>
+            <br>
+            <span>Phone number:
+                <span th:text="${user.phoneNumber}"></span>
+            </span>
+            <br>
+            <span>Email:
+                <span th:text="${user.email}"></span>
+            </span>
+        </div>
+        <div>
+            ===================
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

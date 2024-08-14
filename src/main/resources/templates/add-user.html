@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add user</title>
+</head>
+
+<body>
+
+<form th:method="POST" th:action="@{/users/add}">
+    <h1>Add User</h1>
+
+    <div>
+        <div>
+            <label th:for="firstName" >First name</label>
+        </div>
+        <input  type="text" class="form-control" id="firstName" name="firstName"/>
+        <!--            th:field="*{name}"-->
+    </div>
+
+    <div>
+        <div>
+            <label th:for="lastName">Last name</label>
+        </div>
+        <input type="text" class="form-control" id="lastName" name="lastName"/>
+        <!--            th:field="*{author}"-->
+    </div>
+
+    <div>
+        <div>
+            <label th:for="dateOfBirth">Date of birth</label>
+        </div>
+        <input  type="date" class="form-control" id="dateOfBirth" name="dateOfBirth"/>
+        <!--            th:field="*{name}"-->
+    </div>
+
+    <div>
+        <div>
+            <label th:for="phoneNumber">Phone number</label>
+        </div>
+        <input  type="text" class="form-control" id="phoneNumber" name="phoneNumber"/>
+        <!--            th:field="*{name}"-->
+    </div>
+
+    <div>
+        <div>
+            <label th:for="email">Email</label>
+        </div>
+        <input  type="text" class="form-control" id="email" name="email"/>
+        <!--            th:field="*{name}"-->
+    </div>
+
+    <div>
+        <button type="submit">Add</button>
+    </div>
+
+</form>
+
+</body>
+</html>
